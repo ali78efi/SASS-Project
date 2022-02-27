@@ -1,8 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -11,86 +10,85 @@ body {
 }
 
 header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: .8rem 3rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 3rem;
   background-color: #456fef;
 }
-
 header h1 {
   color: #fff;
   size: 1.2rem;
   font-weight: bold;
 }
-
-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+header h1:hover {
+  color: #ff5100;
+  size: 1.2rem;
+  font-weight: bold;
+  text-shadow: 0px 0px 40px #fff;
 }
 
-nav .logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
+nav {
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+nav .logo {
+  display: flex;
+  align-items: center;
   background-color: orange;
   border-radius: 50%;
   overflow: hidden;
   width: 3rem;
 }
 
-.navbar {
-  list-style-type: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.menu {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.menu i {
+  color: #fff;
+  font-size: 3rem;
+  margin-left: 20px;
+  cursor: pointer;
 }
 
+.navbar {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
 .navbar * {
   margin-right: 1rem;
   margin-left: 1rem;
 }
-
 .navbar li {
   display: block;
   height: 100%;
 }
-
 .navbar a {
   height: inherit;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   text-decoration: none;
   color: white;
   size: 10px;
   font-weight: bold;
 }
-
 .navbar a:hover {
   border-bottom: 2px solid #fff;
 }
+
+@media (max-width: 768px) {
+  .menu {
+    display: flex;
+  }
+
+  nav {
+    display: none;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */

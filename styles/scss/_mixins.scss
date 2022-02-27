@@ -10,3 +10,26 @@
     size: $size;
     font-weight: $weight;
 }
+
+@mixin media($size) {
+    @if ($size == S) {
+        @media (max-width: 480px) {
+            @content;
+        }
+    }
+    @if ($size == M) {
+        @media (max-width: 768px) {
+            @content;
+        }
+    }
+    @if ($size == L) {
+        @media (max-width: 1200px) {
+            @content;
+        }
+    }
+    @if ($size == XL) {
+        @media (min-width: 1200px) {
+            @content;
+        }
+    }
+}
