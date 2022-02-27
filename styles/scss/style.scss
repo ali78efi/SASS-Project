@@ -18,11 +18,14 @@ header {
     background-color: $primary-color;
 
     h1{
-        @include textStyle(1.2rem , bold , $secondary-color);
+        @include textStyle(1.5rem , bold , $secondary-color);
         
         &:hover {
-            @include textStyle(1.2rem , bold , $the-color);
-            text-shadow: 0px 0px 40px  #fff;
+            @include textStyle(1.5rem , bold , $the-color);
+            text-shadow: 1px 1px 20px  #fff,
+             -1px -1px 20px  #fff,
+             -1px 1px 20px  #fff,
+             1px -1px 20px  #fff;
         }
     }
 }
@@ -47,8 +50,7 @@ nav{
     align-items: center;
 
     i{
-        color: #fff;
-        font-size: 3rem;
+        @include textStyle(1.5rem , bold , $secondary-color);
         margin-left: 20px;
         cursor: pointer;
     }
@@ -71,7 +73,7 @@ nav{
             display: flex;
             align-items: center;
             text-decoration: none;
-            @include textStyle(10px,bold,white);
+            @include textStyle(1.2rem,bold,white);
 
             &:hover {
                 border-bottom: 2px solid $secondary-color;
@@ -79,6 +81,91 @@ nav{
         }
 }
 
+.main{
+    display: flex;
+    flex-flow: wrap row-reverse;
+    justify-content: space-between;
+    align-items:center;
+    width: 100%;
+    margin: 20px auto;
+
+    main{
+        @include bodyStyle;
+        @include boxStyle;
+        width: 75%;
+        
+        .logo{
+            border-radius: 50%;
+            overflow: hidden;
+        }
+    }
+
+    aside {
+        @include bodyStyle;
+        @include boxStyle;
+        width: 22%;
+        
+        ul{
+          list-style-type: none;
+          height: 100%;
+          width: 100%;
+          display: flex;
+          flex-flow: wrap column;
+          justify-content: space-evenly;
+
+          div{
+              background-color: $primary-color;
+              @include boxStyle;
+              height: 20%;
+              width: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
+              li{
+                  display: block;
+                  height: 100%;
+                  width: 100%;
+                  a{
+                      height: 100%;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      text-decoration: none;
+                      @include textStyle(1.2rem , bold , $secondary-color);
+                  }
+              }
+          }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+@include media(S){
+    .menu{
+        display: flex;
+    }
+    nav {
+        display: none;
+    }
+    .main{
+        main{
+            width: 100%;
+        }
+        aside{
+            width: 100%;
+        }
+    }
+}
 
 @include media(M){
     .menu{
@@ -86,5 +173,25 @@ nav{
     }
     nav {
         display: none;
+    }
+    .main{
+        main{
+            width: 60%;
+        }
+        aside{
+            width: 38%;
+        }
+    }
+}
+
+
+@include media(L){
+    .main{
+        main{
+            width: 68%;
+        }
+        aside{
+            width: 30%;
+        }
     }
 }
