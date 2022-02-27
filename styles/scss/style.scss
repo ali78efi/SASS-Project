@@ -55,5 +55,9 @@ nav{
             align-items: center;
             text-decoration: none;
             @include textStyle(10px,bold,white);
+
+            &:hover {
+                border-bottom: 2px solid $secondary-color;
+            }
         }
 }

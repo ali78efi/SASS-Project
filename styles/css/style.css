@@ -89,4 +89,8 @@ nav .logo {
   size: 10px;
   font-weight: bold;
 }
+
+.navbar a:hover {
+  border-bottom: 2px solid #fff;
+}
 /*# sourceMappingURL=style.css.map */
