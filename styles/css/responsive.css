@@ -1,8 +1,19 @@
 .container {
   max-width: 1200px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .container-fluid {
   width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.responsive {
+  width: 100%;
+  height: auto;
 }
 /*# sourceMappingURL=responsive.css.map */

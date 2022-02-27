@@ -1,6 +1,13 @@
 .container{
     max-width: 1200px;
+    align-items: center;
 }
 .container-fluid{
     width: 100%;
+    align-items: center;
+}
+
+.responsive{
+    width: 100%;
+    height: auto;
 }

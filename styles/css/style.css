@@ -23,4 +23,70 @@ header {
   padding: .8rem 3rem;
   background-color: #456fef;
 }
+
+header h1 {
+  color: #fff;
+  size: 1.2rem;
+  font-weight: bold;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+nav .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: orange;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 3rem;
+}
+
+.navbar {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar * {
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+
+.navbar li {
+  display: block;
+  height: 100%;
+}
+
+.navbar a {
+  height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  color: white;
+  size: 10px;
+  font-weight: bold;
+}
 /*# sourceMappingURL=style.css.map */
