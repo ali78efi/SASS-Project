@@ -4,3 +4,7 @@
 *{
     @include overall;
 }
+
+body {
+    background-color: $bg-color;
+}
