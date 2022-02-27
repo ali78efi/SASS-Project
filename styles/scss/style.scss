@@ -9,3 +9,10 @@ body {
     background-color: $bg-color;
 }
 
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .8rem 3rem;
+    background-color: $primary-color;
+}
