@@ -8,15 +8,12 @@
 
 body {
   background-color: #edf2f7;
-  min-width: 300px;
 }
 
 header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -312,7 +309,63 @@ nav .logo {
   margin-right: auto;
 }
 
-@media (max-width: 480px) {
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: .8rem 3rem;
+  background-color: #456fef;
+}
+
+footer .left {
+  width: 30%;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+footer .right {
+  width: 50%;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+footer .right ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 0;
+}
+
+footer .right ul a {
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  text-transform: none;
+  padding: 0;
+}
+
+@media (max-width: 500px) {
   .menu {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -330,9 +383,22 @@ nav .logo {
   .courses .box {
     width: 100%;
   }
+  footer {
+    max-width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  footer .left {
+    display: none;
+  }
+  footer .right {
+    padding: 0;
+    margin: 0;
+  }
 }
 
-@media (max-width: 768px) and (min-width: 480px) {
+@media (max-width: 768px) and (min-width: 500px) {
   .menu {
     display: -webkit-box;
     display: -ms-flexbox;

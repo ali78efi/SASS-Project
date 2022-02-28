@@ -11,14 +11,22 @@
     font-weight: $weight;
 }
 
+@mixin headerAndFooterStyle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .8rem 3rem;
+    background-color: $primary-color;
+}
+
 @mixin media($size) {
     @if ($size == S) {
-        @media (max-width: 480px) {
+        @media (max-width: 500px) {
             @content;
         }
     }
     @if ($size == M) {
-        @media (max-width: 768px) and (min-width: 480px){
+        @media (max-width: 768px) and (min-width: 500px){
             @content;
         }
     }

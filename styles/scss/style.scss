@@ -7,16 +7,10 @@
 
 body {
     background-color: $bg-color;
-    min-width: 300px;
 }
 
 header {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: .8rem 3rem;
-    background-color: $primary-color;
+    @include headerAndFooterStyle;
 
     h1{
         @include textStyle(1.5rem , bold , $secondary-color);
@@ -178,7 +172,32 @@ nav{
     }
 }
 
+footer{
+    @include headerAndFooterStyle;
+    .left{
+        width: 30%;
+        @include textStyle(1rem , normal , $secondary-color);
+    }
+    .right{
+        width: 50%;
+        @include textStyle(1rem , normal , $secondary-color);
+        ul{
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items:flex-start;
+            padding: 0;
 
+            a{
+                @include textStyle(inherit , inherit ,inherit);
+                text-transform: none;
+                padding: 0;
+            }
+        }
+    }
+}
 
 
 
@@ -205,6 +224,18 @@ nav{
     .courses{
         .box{
             width: 100%;
+        }
+    }
+    
+    footer{
+       max-width: 100%;
+       justify-content: center;
+        .left{
+            display: none;
+        }
+        .right{
+            padding: 0;
+            margin: 0;
         }
     }
 }
