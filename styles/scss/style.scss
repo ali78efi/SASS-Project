@@ -211,11 +211,12 @@ footer{
         display: none;
     }
     .main{
+        flex-direction: column;
         main{
-            width: 100%;
+            width: 98%;
         }
         aside{
-            width: 100%;
+            width: 98%;
         }
     }
 
