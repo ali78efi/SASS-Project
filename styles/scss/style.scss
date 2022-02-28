@@ -173,10 +173,15 @@ footer{
     .left{
         // width: 30%;
         @include textStyle(1rem , normal , $secondary-color);
+        span{
+            display: inline-block;
+            width:50%;
+        }
     }
     .right{
         // width: 50%;
         @include textStyle(1rem , normal , $secondary-color);
+        width: 30%;
         ul{
             list-style-type: none;
             display: flex;
@@ -273,7 +278,7 @@ footer{
     }
         .courses{
         .box{
-            width: 25%;
+            width: 33%;
         }
     }
 }

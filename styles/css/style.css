@@ -326,10 +326,16 @@ footer .left {
   font-weight: normal;
 }
 
+footer .left span {
+  display: inline-block;
+  width: 50%;
+}
+
 footer .right {
   color: #fff;
   font-size: 1rem;
   font-weight: normal;
+  width: 30%;
 }
 
 footer .right ul {
@@ -431,7 +437,7 @@ footer .right ul a {
     width: 30%;
   }
   .courses .box {
-    width: 25%;
+    width: 33%;
   }
 }
 
